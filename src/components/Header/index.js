@@ -1,10 +1,10 @@
 import React from 'react'
 import { Container } from './styles' 
-import { LinkButton } from '@/components'
-import Logo from '@/assets/gazin.png'
+import { LinkButton } from '../../components'
+import Logo from '../../assets/gazin.png'
 
 const Header = () => (
-    <Container>
+    <Container data-testid="header">
         <LinkButton destiny="list" title="listar" text="Listar desenvolvedores" />
         <LinkButton destiny="add" title="adicionar" text="Adicionar desenvolvedor" />
         <img src={Logo} alt="Logo gazin"/>

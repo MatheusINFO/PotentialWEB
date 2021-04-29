@@ -1,9 +1,9 @@
 import React, { useContext, useState } from 'react'
 import { useForm } from "react-hook-form"
 import { Form } from './styles'
-import api from '@/services/api'
-import { CommonInput, CommonSelect, CommonButton, CommonTitle, OptionItem } from '@/components'
-import { DeveloperContext } from '@/contexts/DeveloperContext'
+import api from '../../services/api'
+import { CommonInput, CommonSelect, CommonButton, CommonTitle, OptionItem } from '../../components'
+import { DeveloperContext } from '../../contexts/DeveloperContext'
 
 const EditDeveloper = () => {
     const { developers, loadData, editDeveloper } = useContext(DeveloperContext)
