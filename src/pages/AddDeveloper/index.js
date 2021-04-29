@@ -3,8 +3,8 @@ import {toast} from 'react-toastify'
 import { useForm } from "react-hook-form"
 import schema from './schema'
 import { Form } from './styles'
-import { CommonInput, CommonSelect, CommonButton, CommonTitle} from '../../components'
-import { DeveloperContext } from '../../contexts/DeveloperContext'
+import { CommonInput, CommonSelect, CommonButton, CommonTitle} from '@/components'
+import { DeveloperContext } from '@/contexts/DeveloperContext'
 
 const AddDeveloper = () => {
     const { addDeveloper } = useContext(DeveloperContext)

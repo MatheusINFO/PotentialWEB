@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@craco/craco": "^6.1.2",
     "@material-ui/data-grid": "^4.0.0-alpha.26",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
@@ -20,9 +21,9 @@
     "yup": "^0.32.9"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
     "eject": "react-scripts eject",
     "docker": "npm run build && docker-compose up"
   },
@@ -45,7 +46,6 @@
     ]
   },
   "devDependencies": {
-    "is-svg": "^4.2.2",
     "react-dev-utils": "^11.0.4"
   }
 }

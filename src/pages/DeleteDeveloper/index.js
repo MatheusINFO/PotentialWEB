@@ -1,8 +1,8 @@
 import React, { useContext } from 'react'
 import { useForm } from "react-hook-form"
 import { Form } from './styles'
-import { OptionItem, CommonButton, CommonSelect, CommonTitle } from '../../components'
-import { DeveloperContext } from '../../contexts/DeveloperContext'
+import { OptionItem, CommonButton, CommonSelect, CommonTitle } from '@/components'
+import { DeveloperContext } from '@/contexts/DeveloperContext'
 
 const DeleteDeveloper = () => {
     const { developers, loadData, deleteDeveloper } = useContext(DeveloperContext)

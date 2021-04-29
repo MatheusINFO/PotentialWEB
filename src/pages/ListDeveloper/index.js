@@ -1,9 +1,9 @@
 import React, { useState, useContext} from 'react'
 import { DataGrid } from '@material-ui/data-grid';
 import { Container } from './styles'
-import { CommonInput, CommonButton, CommonTitle } from '../../components'
-import { columns } from '../../services/columns-grid'
-import { DeveloperContext } from '../../contexts/DeveloperContext'
+import { CommonInput, CommonButton, CommonTitle } from '@/components'
+import { columns } from '@/services/columns-grid'
+import { DeveloperContext } from '@/contexts/DeveloperContext'
 
 const Dashboard = () => {
     const { developersGrid, loadData, listDevelopers } = useContext(DeveloperContext)

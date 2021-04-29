@@ -1,6 +1,6 @@
 import React from 'react'
-import { AddDeveloper, EditDeveloper, DeleteDeveloper, ListDeveloper } from '../index'
-import { Header } from '../../components'
+import { AddDeveloper, EditDeveloper, DeleteDeveloper, ListDeveloper } from '@/pages'
+import { Header } from '@/components'
 
 const Dashboard = () => (
     <>

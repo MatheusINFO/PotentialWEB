@@ -1,5 +1,5 @@
 import React from 'react'
-import { Select } from '../../styles/components'
+import { Select } from '@/styles/components'
 
 const CommonSelect = React.forwardRef ((props, ref) => (
     <Select 

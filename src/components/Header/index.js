@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container } from './styles' 
-import { LinkButton } from '../index'
-import Logo from '../../assets/gazin.png'
+import { LinkButton } from '@/components'
+import Logo from '@/assets/gazin.png'
 
 const Header = () => (
     <Container>
