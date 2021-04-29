@@ -23,6 +23,6 @@
 -  npm run docker (irá fazer o build e chamar o docker-compose up )
 
 >## Como executar - Testes
-(Na pasta clona, execute os comandos)
+(Na pasta clonada, execute os comandos)
 - npm install (caso não tenha feito)
 - npm run test (irá rodar todos os testes)
