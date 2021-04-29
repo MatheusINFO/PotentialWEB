@@ -1,7 +1,8 @@
 import React, { useContext } from 'react'
 import { useForm } from "react-hook-form"
-import { Select, Button, Title } from '../../styles/components'
 import { Form } from './styles'
+import { OptionItem } from '../../components'
+import { Select, Button, Title } from '../../styles/components'
 import { DeveloperContext } from '../../contexts/DeveloperContext'
 
 const DeleteDeveloper = () => {
@@ -12,10 +13,8 @@ const DeleteDeveloper = () => {
         <Form onSubmit={handleSubmit(deleteDeveloper)} id="del">
             <Title>Deletar Desenvolvedor</Title>
             <Select name="id" ref={register}>
-                {!loadData && developers.map((developer, count) => (
-                    <option key={count} value={developer.id}>
-                        {developer.nome}, {developer.idade} anos - ({developer.sexo})
-                    </option>
+                {!loadData && developers.map((dev, count) => (
+                    <OptionItem key={count} value={dev.id} nome={dev.nome} idade={dev.idade} sexo={dev.sexo}/>
                 ))}
             </Select>
             <Button type="submit">Deletar</Button>

@@ -1,30 +1,16 @@
 import React from 'react'
-import { Container, GazinButton, Link } from './styles' 
+import { Container } from './styles' 
+import { LinkButton } from '../index'
+import Logo from '../../assets/gazin.png'
 
-const Header = () => {   
-    return (
-        <Container>
-            <Link to="list" spy smooth duration={500} activeClass="activeLink" title="Listar">
-                Listar desenvolvedores
-            </Link>
-
-            <Link to="add" spy smooth duration={500} activeClass="activeLink" title="Adicionar">
-                Adicionar desenvolvedor
-            </Link>
-            
-            <GazinButton title="Sempre fazendo o melhor pra você!">
-                <strong>Gazin</strong>
-            </GazinButton>
-
-            <Link to="edit" spy smooth duration={500} activeClass="activeLink" title="Editar">
-                Editar desenvovledor
-            </Link>
-
-            <Link to="del" spy smooth duration={500} activeClass="activeLink" title="Deletar">
-                Deletar desenvolvedor
-            </Link>
-        </Container>
-    )
-}
+const Header = () => (
+    <Container>
+        <LinkButton destiny="list" title="listar" text="Listar desenvolvedores" />
+        <LinkButton destiny="add" title="adicionar" text="Adicionar desenvolvedor" />
+        <img src={Logo} alt="Logo gazin"/>
+        <LinkButton destiny="edit" title="editar" text="Editar desenvolvedor" />
+        <LinkButton destiny="del" title="deletar" text="Deletar desenvolvedor" />
+    </Container>
+)
 
 export default Header

@@ -1,10 +1,11 @@
 import React, { useContext } from 'react'
 import {toast} from 'react-toastify'
 import { useForm } from "react-hook-form"
-import { DeveloperContext } from '../../contexts/DeveloperContext'
-import { Input, Select, Button, Title } from '../../styles/components'
-import { Form } from './styles'
 import schema from './schema'
+import { Form } from './styles'
+import { CommonInput, CommonSelect } from '../../components'
+import { Button, Title } from '../../styles/components'
+import { DeveloperContext } from '../../contexts/DeveloperContext'
 
 const AddDeveloper = () => {
     const { addDeveloper } = useContext(DeveloperContext)
@@ -21,14 +22,14 @@ const AddDeveloper = () => {
     return (
         <Form onSubmit={handleSubmit(onSubmit)} id="add">
             <Title>Adicionar Desenvolvedor</Title>
-            <Input type="text" name="nome" ref={register} placeholder="Nome"/>
-            <Select name="sexo" ref={register}>
+            <CommonInput name="nome" ref={register} placeholder="Nome"/>
+            <CommonSelect name="sexo" ref={register}>
                 <option value="M">Masculino</option>
                 <option value="F">Feminino</option>
-            </Select>
-            <Input type="number" min="1" name="idade" ref={register} placeholder="Idade"/>
-            <Input type="text" name="hobby" ref={register} placeholder="Hobby"/>
-            <Input type="date" name="datanascimento" ref={register} />
+            </CommonSelect>
+            <CommonInput type="number" min="1" name="idade" ref={register} placeholder="Idade"/>
+            <CommonInput name="hobby" ref={register} placeholder="Hobby"/>
+            <CommonInput type="date" name="datanascimento" ref={register}/>
             <Button type="submit">Cadastrar</Button>
         </Form>
     )

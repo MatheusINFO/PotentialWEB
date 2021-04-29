@@ -1,9 +1,10 @@
 import React, { useContext, useState } from 'react'
 import { useForm } from "react-hook-form"
-import api from '../../services/api'
-import { DeveloperContext } from '../../contexts/DeveloperContext'
-import { Input, Select, Button, Title } from '../../styles/components'
 import { Form } from './styles'
+import api from '../../services/api'
+import { CommonInput, CommonSelect, OptionItem } from '../../components'
+import { DeveloperContext } from '../../contexts/DeveloperContext'
+import { Button, Title } from '../../styles/components'
 
 const EditDeveloper = () => {
     const { developers, loadData, editDeveloper } = useContext(DeveloperContext)
@@ -23,58 +24,23 @@ const EditDeveloper = () => {
     return (
         <Form onSubmit={handleSubmit(editDeveloper)} id="edit">
             <Title>Editar Desenvolvedor</Title>
-            <Select name="id" ref={register} defaultValue={''} onChange={findDeveloper}>
+            <CommonSelect name="id" ref={register} defaultValue={''} onChange={findDeveloper}>
                 <option value="" disabled>--Selecione--</option>
-                {!loadData && developers.map((developer, count) => (
-                    <option key={count} value={developer.id}>
-                        {developer.nome}, {developer.idade} anos - ({developer.sexo})
-                    </option>
+                {!loadData && developers.map((dev, count) => (
+                     <OptionItem key={count} value={dev.id} nome={dev.nome} idade={dev.idade} sexo={dev.sexo}/>
                 ))}
-            </Select>
+            </CommonSelect>
 
             { !load && (
                 <>
-                    <Input 
-                        type="text" 
-                        name="nome" 
-                        ref={register} 
-                        placeholder="Nome" 
-                        value={developer.nome} 
-                        onChange={e => inputChange(e)}
-                    />
-                    <Select 
-                        name="sexo" 
-                        ref={register} 
-                        value={developer.sexo} 
-                        onChange={e => inputChange(e)}
-                    >
+                    <CommonInput name="nome" ref={register} placeholder="Nome" value={developer.nome} onChange={inputChange}/>
+                    <CommonSelect name="sexo" ref={register} value={developer.sexo}  onChange={inputChange}>
                         <option value="M">Masculino</option>
                         <option value="F">Feminino</option>
-                    </Select>
-                    <Input 
-                        type="number" 
-                        min="1" 
-                        name="idade" 
-                        ref={register} 
-                        placeholder="Idade" 
-                        value={developer.idade} 
-                        onChange={e => inputChange(e)}
-                    />
-                    <Input 
-                        type="text" 
-                        name="hobby" 
-                        ref={register} 
-                        placeholder="Hobby" 
-                        value={developer.hobby} 
-                        onChange={e => inputChange(e)}
-                    />
-                    <Input 
-                        type="date" 
-                        name="datanascimento" 
-                        ref={register} 
-                        value={developer.datanascimento} 
-                        onChange={e => inputChange(e)}
-                    />
+                    </CommonSelect>
+                    <CommonInput type="number" min="1" name="idade" ref={register} placeholder="Idade" value={developer.idade} onChange={inputChange}/>
+                    <CommonInput name="hobby" ref={register} placeholder="Hobby" value={developer.hobby} onChange={inputChange}/>
+                    <CommonInput type="date" name="datanascimento" ref={register} value={developer.datanascimento} onChange={inputChange}/>
                     <Button type="submit">Atualizar</Button>
                 </>
             )}
