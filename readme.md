@@ -14,7 +14,7 @@
 -  Material-UI (Criação do GRID)
 -  Testing-Library/react (Criação de testes)
 -  Faker (Criação de dados fakes para os testes)
--  Docker (Criado para subir o banco e os servidor)
+-  Docker (Criado para subir a aplicação)
 
 >## Como executar - Frontend:
 (É necessário do docker instalado, o frontend irá usar a porta 3000)
