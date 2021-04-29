@@ -1,0 +1,12 @@
+version: "3"
+services:
+  web:
+    container_name: gazinweb
+    build: .
+    restart: always
+    image: gazin-web
+    command: npm start
+    volumes:
+      - .:/usr/src/web
+    ports:
+      - "3000:3000"
