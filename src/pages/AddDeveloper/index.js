@@ -3,8 +3,7 @@ import {toast} from 'react-toastify'
 import { useForm } from "react-hook-form"
 import schema from './schema'
 import { Form } from './styles'
-import { CommonInput, CommonSelect } from '../../components'
-import { Button, Title } from '../../styles/components'
+import { CommonInput, CommonSelect, CommonButton, CommonTitle} from '../../components'
 import { DeveloperContext } from '../../contexts/DeveloperContext'
 
 const AddDeveloper = () => {
@@ -21,7 +20,7 @@ const AddDeveloper = () => {
 
     return (
         <Form onSubmit={handleSubmit(onSubmit)} id="add">
-            <Title>Adicionar Desenvolvedor</Title>
+            <CommonTitle text="Adicionar Desenvolvedor"/>
             <CommonInput name="nome" ref={register} placeholder="Nome"/>
             <CommonSelect name="sexo" ref={register}>
                 <option value="M">Masculino</option>
@@ -30,7 +29,7 @@ const AddDeveloper = () => {
             <CommonInput type="number" min="1" name="idade" ref={register} placeholder="Idade"/>
             <CommonInput name="hobby" ref={register} placeholder="Hobby"/>
             <CommonInput type="date" name="datanascimento" ref={register}/>
-            <Button type="submit">Cadastrar</Button>
+            <CommonButton type="submit" text="Cadastrar"/>
         </Form>
     )
 }

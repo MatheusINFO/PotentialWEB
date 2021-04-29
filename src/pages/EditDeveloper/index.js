@@ -2,9 +2,8 @@ import React, { useContext, useState } from 'react'
 import { useForm } from "react-hook-form"
 import { Form } from './styles'
 import api from '../../services/api'
-import { CommonInput, CommonSelect, OptionItem } from '../../components'
+import { CommonInput, CommonSelect, CommonButton, CommonTitle, OptionItem } from '../../components'
 import { DeveloperContext } from '../../contexts/DeveloperContext'
-import { Button, Title } from '../../styles/components'
 
 const EditDeveloper = () => {
     const { developers, loadData, editDeveloper } = useContext(DeveloperContext)
@@ -23,7 +22,7 @@ const EditDeveloper = () => {
 
     return (
         <Form onSubmit={handleSubmit(editDeveloper)} id="edit">
-            <Title>Editar Desenvolvedor</Title>
+            <CommonTitle text="Editar Desenvolvedor"/>
             <CommonSelect name="id" ref={register} defaultValue={''} onChange={findDeveloper}>
                 <option value="" disabled>--Selecione--</option>
                 {!loadData && developers.map((dev, count) => (
@@ -41,7 +40,7 @@ const EditDeveloper = () => {
                     <CommonInput type="number" min="1" name="idade" ref={register} placeholder="Idade" value={developer.idade} onChange={inputChange}/>
                     <CommonInput name="hobby" ref={register} placeholder="Hobby" value={developer.hobby} onChange={inputChange}/>
                     <CommonInput type="date" name="datanascimento" ref={register} value={developer.datanascimento} onChange={inputChange}/>
-                    <Button type="submit">Atualizar</Button>
+                    <CommonButton type="submit" text="Atualizar"/>
                 </>
             )}
         </Form>
