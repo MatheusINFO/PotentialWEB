@@ -16,4 +16,13 @@ export const Container = styled.div`
    img{
        height: 200px;
    }
+
+   @media (max-width: 1000px){
+        font-size: 14px;
+
+        img{
+            display: none;
+        }
+    }
+
 `

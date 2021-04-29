@@ -22,7 +22,7 @@ const DeveloperProvider = ({ children }) => {
     const reloadWindow = () => {
         setTimeout(function(){
             window.location.reload()
-        }, 3000)
+        }, 1500)
     }
 
     const addDeveloper = (data) => {

@@ -1,6 +1,6 @@
 import React, { useState, useContext} from 'react'
 import { DataGrid } from '@material-ui/data-grid';
-import { Container } from './styles'
+import { Container, Content } from './styles'
 import { CommonInput, CommonButton, CommonTitle } from '../../components'
 import { columns } from '../../services/columns-grid'
 import { DeveloperContext } from '../../contexts/DeveloperContext'
@@ -32,7 +32,7 @@ const Dashboard = () => {
     return (
         <Container id="list">
             {!loadData && (
-                <div style={{ height: 400, width: 970 }}>
+                <Content>
                     <CommonTitle text="Listar Desenvolvedores"/>
                     <CommonInput placeholder="Nome" name="nome" onChange={inputChange} width="100px" height="30px"/>
                     <CommonInput placeholder="Sexo" name="sexo" onChange={inputChange} width="100px" height="30px"/>
@@ -46,7 +46,7 @@ const Dashboard = () => {
                         columns={columns} 
                         pageSize={5} 
                     />
-                </div>
+                </Content>
             )}
         </Container>
     )
