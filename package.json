@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@material-ui/data-grid": "^4.0.0-alpha.26",
+    "@material-ui/styles": "^4.11.4",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.2.6",
     "@testing-library/user-event": "^12.1.10",
@@ -24,7 +25,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --silent",
     "eject": "react-scripts eject",
-    "docker": "yarn run build && docker-compose up -d"
+    "docker": "npm run build && docker-compose up -d"
   },
   "eslintConfig": {
     "extends": [
