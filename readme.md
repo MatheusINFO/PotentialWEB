@@ -19,10 +19,10 @@
 >## Como executar - Frontend:
 (É necessário do docker instalado, o frontend irá usar a porta 3000)
 -  git clone https://github.com/MatheusINFO/PotentialWEB.git (clone o repositório e vá até a pasta)
--  npm install (irá instalar as dependências)
--  npm run docker (irá fazer o build e chamar o docker-compose up )
+-  yarn install (irá instalar as dependências)
+-  yarn run docker (irá fazer o build e chamar o docker-compose up )
 
 >## Como executar - Testes
 (Na pasta clona, execute os comandos)
-- npm install (caso não tenha feito)
-- npm run test (irá rodar todos os testes)
+- yarn install (caso não tenha feito)
+- yarn run test (irá rodar todos os testes)
