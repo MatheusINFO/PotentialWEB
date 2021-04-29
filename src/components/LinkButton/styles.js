@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Link as LinkComponent } from 'react-scroll';
+import { Link as LinkComponent } from 'react-router-dom';
 
 export const Link = styled(LinkComponent)`
     cursor: pointer;

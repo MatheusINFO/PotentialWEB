@@ -5,7 +5,7 @@ import { CommonInput, CommonButton, CommonTitle } from '../../components'
 import { columns } from '../../services/columns-grid'
 import { DeveloperContext } from '../../contexts/DeveloperContext'
 
-const Dashboard = () => {
+const ListDeveloper = () => {
     const { developersGrid, loadData, listDevelopers } = useContext(DeveloperContext)
     const [filters, setFilters] = useState({
         nome: '',
@@ -52,4 +52,4 @@ const Dashboard = () => {
     )
 }
 
-export default Dashboard
+export default ListDeveloper

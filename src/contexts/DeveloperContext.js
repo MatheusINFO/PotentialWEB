@@ -19,16 +19,16 @@ const DeveloperProvider = ({ children }) => {
         })
     }, [refresh])
 
-    const reloadWindow = () => {
+    const changePage = () => {
         setTimeout(function(){
-            window.location.reload()
+            window.location.replace('/');
         }, 1500)
     }
 
     const addDeveloper = (data) => {
         api.post('/developers', data).then(function (){
             toast.success("Desenvolvedor cadastrado com sucesso!")
-            reloadWindow()
+            changePage()
         }).catch(function(error){
             toast.error("Erro ao adicionar desenvolvedor!")
         })
@@ -37,7 +37,7 @@ const DeveloperProvider = ({ children }) => {
     const deleteDeveloper = (data) => {
         api.delete(`/developers/${data.id}`).then(function (){
             toast.success("Desenvolvedor removido com sucesso!")
-            reloadWindow()
+            changePage()
         }).catch(function(error){
             toast.error("Erro ao remover desenvolvedor!")
         })
@@ -46,7 +46,7 @@ const DeveloperProvider = ({ children }) => {
     const editDeveloper = (data) => {
         api.put(`/developers/${data.id}`, data).then(function (){
             toast.success("Desenvolvedor atualizado com sucesso!")
-            reloadWindow()
+            changePage()
         }).catch(function(error){
             toast.error("Erro ao atualizar desenvolvedor!")
         })
