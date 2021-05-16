@@ -9,7 +9,7 @@
 -  6. DELETE /developers/{id} (Deleta um desenvolvedor)
 
 >## Oque foi utilizado:
--  ReactJS, Context e Hooks (Construção da aplicação)
+-  ReactJS, Context e Hooks (Construção da aplicação) 
 -  Eslint (Padronização de código)
 -  Material-UI (Criação do GRID)
 -  Testing-Library/react (Criação de testes)
